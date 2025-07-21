@@ -20,6 +20,7 @@ The application is deployed and live at : https://photo-gallery-explorer.vercel.
 # Known Limitations
 1. Scroll logic may still call loadMore() multiple times on extremely fast scrolls
 2. No persistent caching, the page refresh resets the photo list
+3. Need to make the application responsive
 
 # Next Three Improvements for Production
 1. Fix the scroll issue on fast scrolls.
