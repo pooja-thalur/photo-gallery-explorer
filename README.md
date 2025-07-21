@@ -6,7 +6,7 @@ Backend code : https://github.com/pooja-thalur/photo-generator
 
 The application is deployed and live at : https://photo-gallery-explorer.vercel.app/
 
-1. git clone [https://github.com/pooja-thalur/photo-gallery-explorer]
+1. git clone [https://github.com/pooja-thalur/photo-gallery-explorer.git]
 2. Install dependencies: npm install
 3. Start the server: npm start
 
