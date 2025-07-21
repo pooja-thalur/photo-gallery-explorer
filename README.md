@@ -2,9 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
 Using the api calls from this as the backend - https://photo-generator-7si8.onrender.com/ \
-Backend code : https://github.com/pooja-thalur/photo-generator \
+Backend code : https://github.com/pooja-thalur/photo-generator 
 
-The application is deployed and live at : https://photo-gallery-explorer.vercel.app/ \
+The application is deployed and live at : https://photo-gallery-explorer.vercel.app/
 
 1. git clone [https://github.com/pooja-thalur/photo-gallery-explorer]
 2. Install dependencies: npm install
