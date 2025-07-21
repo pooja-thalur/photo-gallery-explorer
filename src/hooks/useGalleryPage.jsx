@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const BASE_URL = ' http://localhost:5000';
+const BASE_URL = ' https://photo-generator-7si8.onrender.com';
 const PAGE_SIZE = 100;
 
 function usePhotos(page, setPhotos) {
