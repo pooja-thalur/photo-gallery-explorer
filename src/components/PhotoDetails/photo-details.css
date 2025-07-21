@@ -1,0 +1,25 @@
+.photo-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: auto;
+}
+
+.photo-details img {
+    height: auto;
+    width: auto;
+    margin: 1rem auto;
+    aspect-ratio: auto 455 / 303;
+}
+
+.photo-details h2 {
+    margin: 12px 0;
+}
+
+.photo-details p {
+    margin: 4px 0;
+}

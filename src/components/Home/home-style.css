@@ -1,0 +1,26 @@
+.home-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f1f4f4;
+    font-family: sans-serif;
+
+  }
+
+  .home-title {
+    font-size: 100px;
+    margin-bottom: 1.5rem;
+    color: #0e0d0d;
+  }
+
+  button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
