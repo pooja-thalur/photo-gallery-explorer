@@ -1,27 +1,28 @@
 import Gallery from '../../components/Gallery';
 import PhotoFilters from '../../components/PhotoFilters';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, useRef } from 'react';
 import FiltersContext from '../../context/FiltersContext';
 import PhotoContext from '../../context/PhotoContext';
 
 export default function GalleryPage({ loadMore, loading, hasMore } ) {
     const { searchText, setSearchText, sortOption, setSortOption, filteredPhotos, setFilteredPhotos } = useContext(FiltersContext);
     const { photos } = useContext(PhotoContext);
-    const [albumInput, setAlbumInput] = useState([]);
     const [albumFilter, setAlbumFilter] = useState([]);
+    const albumInput = useRef(new Set());
 
     useEffect(() => {
         let active = true;
         const debounceTimer = setTimeout(() => {
             let result = photos;
-            console.log("Filtering photos with search text:", photos, albumInput);
-
+            
             // First filter by search text
             if (searchText) {
                 result = result ? result.filter(photo => {
                     return photo.title.toLowerCase().includes(searchText.toLowerCase())
                 }) : [];
             }
+
+            result.forEach(photo => albumInput.current.add(photo.albumId));
 
             console.log("Filtered photos by search text in page:", searchText, sortOption);
 
@@ -49,9 +50,10 @@ export default function GalleryPage({ loadMore, loading, hasMore } ) {
 
     return (
         <>
+            {/* <h1>Photo Gallery Explorer</h1> */}
             <PhotoFilters searchText={searchText} setSearchText={setSearchText} sortOption={sortOption} 
                 setSortOption={setSortOption} setFilteredPhotos={setFilteredPhotos} albumFilter={albumFilter} 
-                albumInput={albumInput}
+                albumInput={albumInput.current}
                 setAlbumFilter={setAlbumFilter} 
             />
             <Gallery photos={filteredPhotos} loadMore={loadMore} loading={loading} hasMore={hasMore}/>

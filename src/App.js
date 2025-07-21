@@ -11,7 +11,7 @@ function App() {
     <Routes>
       <Route exact={true} path="/" element={<Home />} />
       <Route path="/gallery" element={<MainPage />} />
-      <Route path="/photo/:id" element={<PhotoDetails />} /> 
+      <Route path="/photo/:id" element={<PhotoDetails />} /> {/* ✅ detail route */}
     </Routes>
     </BrowserRouter>
   );

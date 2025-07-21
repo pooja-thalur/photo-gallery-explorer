@@ -1,4 +1,12 @@
 h1 {
-    font-size: 70px;
+    font-size: 25px;
     color: #050505;
+    margin: 15px;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: static;
 }

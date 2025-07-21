@@ -9,25 +9,16 @@ export default function Photo({ data , index}) {
         console.log("Photo clicked", photo.id);
         navigate(`/photo/${photo.id}`, { state: { photo } }, {component: PhotoDetails });
     }
-    // const index = rowIdx * columnCount + colIdx;
-    // if(index>= photo.length) {
-    //     return null;
-    // }
-    const photo = data[index];
-    // console.log("Rendering photo", index, photo);
 
+    const photo = data[index];
     return (
         <div className="photo" key={photo.id} onClick={() => photoClicked(photo)}>
-            {/* <Routes> */}
-            {/* <Route path={`/photo/${photo.id}`} state={{ photo }} className="photo-link"> */}
-                <img src={photo.thumbnailUrl} alt={photo.title} onClick={() => photoClicked(photo)} />
-                <div className="photo-item">
-                    <p className="photo-album">{photo.albumId}</p>
-                    <p className="photo-title">{photo.title}</p>
-                    <p className="photo-url" >{photo.url}</p>
-                </div>
-            {/* </Route>
-            </Routes> */}
+            <img src={photo.thumbnailUrl} alt={photo.title} onClick={() => photoClicked(photo)} />
+            <div className="photo-item">
+                <p className="photo-album">{photo.albumId}</p>
+                <p className="photo-title">{photo.title}</p>
+                <p className="photo-url" >{photo.url}</p>
+            </div>
         </div>
     );
 }

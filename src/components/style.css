@@ -16,20 +16,25 @@ img {
 
 .photo {
     display: flex;
-    align-items: center;
     border: 1px solid #eee;
     border-radius: 8px;
-    padding: 12px;
+    padding: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
 .gallery {
-    display: grid;
+    /* display: grid;
     flex-direction: column;
-    grid-template-columns: repeat(5, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 5px;
     margin-top: 24px;
-    overflow-y: hidden;
+    overflow-y: hidden; */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    height: 100vh; /* or 80vh, as needed */
+    overflow: auto;
 }
 
 .photo-item{
@@ -38,6 +43,7 @@ img {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
+    padding: 10px;
 }
 
 .photo-url:hover{
